@@ -18,6 +18,12 @@ export default [
       'pnpm-lock.yaml',
       'pnpm-workspace.yaml',
       'node_modules',
+      'packages/language-server/node_modules',
+      'packages/language-server/dist',
+      'packages/vscode/node_modules',
+      'packages/vscode/.vscode-test',
+      'packages/vscode/dist',
+      'packages/vscode/dist-tests',
     ],
   },
 

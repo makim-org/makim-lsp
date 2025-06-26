@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "build": "pnpm --filter language-server build && pnpm --filter vscode build",
+    "test": "pnpm --filter language-server test && pnpm --filter vscode test",
+    "format:check": "prettier --check ."
   },
   "keywords": [],
   "author": "",
