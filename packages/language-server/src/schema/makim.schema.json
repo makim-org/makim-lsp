@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Makim Configuration Schema",
+  "title": "Makim configuration schema",
   "type": "object",
   "required": ["groups"],
   "properties": {
@@ -151,11 +151,11 @@
                             },
                             "type": {
                               "type": "string",
-                              "enum": ["string", "bool"],
+                              "enum": ["string", "bool", "integer"],
                               "description": "Type of the argument."
                             },
                             "default": {
-                              "type": ["string", "boolean"],
+                              "type": ["string", "boolean", "integer"],
                               "description": "Default value for the argument."
                             },
                             "required": {
@@ -170,6 +170,11 @@
                             "interactive": {
                               "type": "boolean",
                               "description": "Set the argument as interactive."
+                            },
+                            "validations": {
+                              "type": "object",
+                              "description": "JSON schema validations for the argument",
+                              "additionalProperties": true
                             }
                           },
                           "additionalProperties": false
